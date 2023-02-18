@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "KP World",
+  "description": "Kalpa All in One",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/favicon.png"
+  },
+  "permissions": ["tabs", "activeTab", "alarms", "notifications"],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
